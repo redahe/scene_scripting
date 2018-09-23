@@ -11,11 +11,11 @@ SET_FILE_NAME='file_name='
 
 STUBS = [
 ('Music', '.*music.*\.(it|xm|mod|s3m)',
- 'schism -p $file_name & sleep 2m 5s; ./sendkey.sh schism '+
+ 'schism -p $file_name & ./wait.py 2m 5s; ./sendkey.sh schism '+
  '\'ctrl+Q\' \'Return\''),
 
 ('ZX_Discs', '.*\.(trd|scl)',
- 'fuse --full-screen -m pentagon $file_name & sleep 2m; ./sendkey.sh Fuse '+
+ 'fuse --full-screen -m pentagon $file_name & ./wait.py 2m; ./sendkey.sh Fuse '+
   '\'F10\' \'Return\'')
 
 ]
